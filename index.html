@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>
+99 Red Balloons
+</title>
+<link href="99 Rhett Balloons.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.spritely-0.6.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script>
+$(document).ready(function() {
+    $('#far-clouds').pan({fps: 30, speed: 0.7, dir: 'left'});
+    $('#near-clouds').pan({fps: 30, speed: 1, dir: 'left'});
+});
+
+
+var message = new Array() // leave this as is
+
+message[0] = "You and I, in a little toy shop,";
+message[1] = "Buy a bag of balloons with the money we've got.";
+message[2] = "Set them free at the break of dawn";
+message[3] = "'til one by one they were gone.";
+message[4] = "Back at base, bugs in the software,";
+message[5] = "Flash the message: Something's out there!";
+message[6] = "Floating in the summer sky,";
+message[7] = "Ninety-nine RHETT balloons go by.";
+message[8] = "......";
+message[9] = "Fooled Ya. -,)";
+message[10] = "Happy April Fools' Day!!!";
+message[11] = "Happy April Fools' Day!!!";
+message[12] = "Happy April Fools' Day!!!";
+message[13] = "There will be 68 More Balloons.";
+message[14] = "Soon.";
+message[15] = "Soon.";
+message[16] = "Soon.";
+message[17] = "Soon.";
+message[18] = "Soon.";
+message[19] = "Soon.";
+message[20] = "Soon.";
+
+var reps = 1
+
+var speed = 440
+
+var p=message.length;
+var T="";
+var C=0;
+var mC=0;
+var s=0;
+var sT=null;
+if(reps<1)reps=1;
+function doTheThing(){
+T=message[mC];
+A();}
+function A(){
+s++
+if(s>1){s=1}
+
+if(s==1){document.title=T}
+if(C<(8*reps)){
+sT=setTimeout("A()",speed);
+C++
+}else{
+C=0;
+s=0;
+mC++
+if(mC>p-1)mC=0;
+sT=null;
+doTheThing();}}
+doTheThing();
+
+</script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<audio autoplay>
+    	<source src="99 Red Balloons (Updated).mp3" type="audio/mpeg">
+    </audio>
+    <div id="container">
+        <div id="far-clouds" class=" far-clouds stage1 "></div>
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb1 alpha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb2 beta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb3 chroma" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb4 alpha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb5 beta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb6 chroma" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb7 alpha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb8 beta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb9 chroma" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb10 alpha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb11 beta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb12 chroma" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb13 alpha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb14 beta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb15 chroma" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb16 delta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb17 etha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb18 feta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb19 delta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb20 etha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb21 feta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb22 delta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb23 etha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb24 feta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb25 delta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb26 etha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb27 feta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb28 delta" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb29 etha" />
+        <img src="img/Rhett Balloon.png" class="rhettballoon rb30 feta" />
+
+        <div id="near-clouds" class=" near-clouds stage2 "></div>
+        <div class="above">
+            <img src="img/Happy.png" class="cloud1 up" />
+            <img src="img/April.png" class="cloud2 down" />
+            <img src="img/Fools.png" class="cloud3 up" />
+            <img src="img/Day.png" class="cloud4 down" />
+        </div>
+		<img src="img/City.png" class="below" />
+        <img src="img/Rhett Balloon with Hanging Link (Version 2).png" class="front chroma" />
+        
+    </div>
+</body>
+</html>
